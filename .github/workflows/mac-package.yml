@@ -25,10 +25,12 @@ jobs:
     runs-on: macos-latest
     timeout-minutes: 30
     env:
-      GH_TOKEN: ${{ github.token }}
       VERSION: ${{ inputs.version }}
     steps:
       - name: Fetch the built app files
+        env:
+          # Only this step sees the token: the packager would otherwise try to publish.
+          GH_TOKEN: ${{ github.token }}
         run: |
           gh release download mac-build-input --repo "$GITHUB_REPOSITORY" --pattern mac-payload.zip
           unzip -q mac-payload.zip -d app
