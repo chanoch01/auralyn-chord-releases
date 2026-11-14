@@ -1,0 +1,86 @@
+# Package the Mac version of Auralyn Chord on a Mac runner.
+#
+# Input: the already-built app files (the same compiled files that ship inside
+# the Windows installer), uploaded as "mac-payload.zip" to the draft release
+# "mac-build-input". No source code is involved.
+#
+# Output: Apple Silicon and Intel disk images, attached to the release named in
+# "version". The app is not signed with an Apple Developer ID and not notarized;
+# it is signed ad hoc so it can start on Apple Silicon. First launch needs
+# right-click → Open.
+name: Package for Mac
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Version to package (for example 1.0.9)
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  package:
+    runs-on: macos-latest
+    timeout-minutes: 30
+    env:
+      GH_TOKEN: ${{ github.token }}
+      VERSION: ${{ inputs.version }}
+    steps:
+      - name: Fetch the built app files
+        run: |
+          gh release download mac-build-input --repo "$GITHUB_REPOSITORY" --pattern mac-payload.zip
+          unzip -q mac-payload.zip -d app
+          cd app && node -e 'const p=require("./package.json"); if (p.version !== process.env.VERSION) { console.error("payload is " + p.version + ", asked for " + process.env.VERSION); process.exit(1) }'
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Install the packaging tools
+        working-directory: app
+        run: npm ci --ignore-scripts && node node_modules/electron/install.js
+
+      - name: Build the disk images (Apple Silicon and Intel)
+        working-directory: app
+        env:
+          CSC_IDENTITY_AUTO_DISCOVERY: 'false'
+        run: npx electron-builder --mac dmg --arm64 --x64 -c.mac.identity=- --publish never
+
+      - name: Check the app is signed (ad hoc) and well formed
+        working-directory: app
+        run: |
+          codesign --verify --deep --strict --verbose=2 "release/mac-arm64/Auralyn Chord.app"
+          codesign -dv "release/mac-arm64/Auralyn Chord.app" 2>&1 | grep -E "Signature|Identifier|flags" || true
+          file "release/mac-arm64/Auralyn Chord.app/Contents/MacOS/Auralyn Chord"
+          file "release/mac/Auralyn Chord.app/Contents/MacOS/Auralyn Chord"
+
+      - name: Start the packaged app once (does it open, draw and name a chord?)
+        id: smoke
+        continue-on-error: true
+        working-directory: app
+        env:
+          AURALYN_SMOKE: '1'
+        run: |
+          "release/mac-arm64/Auralyn Chord.app/Contents/MacOS/Auralyn Chord" > smoke.txt 2>smoke.err || true
+          grep -o 'AURALYN_SMOKE.*' smoke.txt | cut -c1-1600 || { echo "no result"; tail -20 smoke.err; }
+          grep -q '"appRendered":true' smoke.txt
+
+      - name: Name the files and write checksums
+        working-directory: app/release
+        run: |
+          mv "Auralyn Chord-${VERSION}-arm64.dmg" "Auralyn-Chord-${VERSION}-mac-apple-silicon.dmg"
+          mv "Auralyn Chord-${VERSION}.dmg" "Auralyn-Chord-${VERSION}-mac-intel.dmg"
+          shasum -a 256 Auralyn-Chord-*.dmg | tee SHA256-mac.txt
+          echo "smoke: ${{ steps.smoke.outcome }}" | tee -a SHA256-mac.txt
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: auralyn-chord-mac-${{ inputs.version }}
+          path: |
+            app/release/Auralyn-Chord-*.dmg
+            app/release/SHA256-mac.txt
+            app/smoke.txt
+          retention-days: 14
+          if-no-files-found: error
