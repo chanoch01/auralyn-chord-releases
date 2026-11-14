@@ -1,0 +1,285 @@
+{
+ "library": "MANIFY",
+ "instruments": [
+  {
+   "id": "25-degrees-celcius-lead-mono",
+   "name": "25 Degrees Celcius - Lead(Mono)",
+   "category": "Lead",
+   "dir": "25-degrees-celcius-lead-mono",
+   "bytes": 2116384,
+   "files": [
+    "Samples/25 Degrees Celcius Long Main Soft.flac",
+    "Samples/25 Degrees Celcius Long Main Med.flac",
+    "Samples/25 Degrees Celcius Long Main.flac"
+   ]
+  },
+  {
+   "id": "25-degrees-celcius-lead-poly",
+   "name": "25 Degrees Celcius - Lead(Poly)",
+   "category": "Lead",
+   "dir": "25-degrees-celcius-lead-poly",
+   "bytes": 2116384,
+   "files": [
+    "Samples/25 Degrees Celcius Long Main Soft.flac",
+    "Samples/25 Degrees Celcius Long Main Med.flac",
+    "Samples/25 Degrees Celcius Long Main.flac"
+   ]
+  },
+  {
+   "id": "25-degrees-celcius-lead",
+   "name": "25 Degrees Celcius - Lead",
+   "category": "Lead",
+   "dir": "25-degrees-celcius-lead",
+   "bytes": 2116384,
+   "files": [
+    "Samples/25 Degrees Celcius Long Main Soft.flac",
+    "Samples/25 Degrees Celcius Long Main Med.flac",
+    "Samples/25 Degrees Celcius Long Main.flac"
+   ]
+  },
+  {
+   "id": "80s-brass",
+   "name": "80s Brass",
+   "category": "Brass",
+   "dir": "80s-brass",
+   "bytes": 851809,
+   "files": [
+    "Samples/80s Brass Long.flac"
+   ]
+  },
+  {
+   "id": "atmosphere",
+   "name": "Atmosphere",
+   "category": "Pad",
+   "dir": "atmosphere",
+   "bytes": 758259,
+   "files": [
+    "Samples/Saw Grozo.flac"
+   ]
+  },
+  {
+   "id": "bfc-big-fat-comp",
+   "name": "BFC - Big Fat Comp",
+   "category": "Synth",
+   "dir": "bfc-big-fat-comp",
+   "bytes": 752491,
+   "files": [
+    "Samples/PWM Stabs Long Hard.flac"
+   ]
+  },
+  {
+   "id": "bells-stack",
+   "name": "Bells - Stack",
+   "category": "EP",
+   "dir": "bells-stack",
+   "bytes": 1506763,
+   "files": [
+    "Samples/Bells Long.flac"
+   ]
+  },
+  {
+   "id": "bright-surround",
+   "name": "Bright Surround",
+   "category": "Synth",
+   "dir": "bright-surround",
+   "bytes": 1509977,
+   "files": [
+    "Samples/Poly Synth Long.flac",
+    "Samples/Poly Synth Long High.flac"
+   ]
+  },
+  {
+   "id": "bright-sweep",
+   "name": "Bright Sweep",
+   "category": "Pad",
+   "dir": "bright-sweep",
+   "bytes": 3544872,
+   "files": [
+    "Samples/Bright Sweep Long.flac"
+   ]
+  },
+  {
+   "id": "essence",
+   "name": "ESSENCE",
+   "category": "Pad",
+   "dir": "essence",
+   "bytes": 1762480,
+   "files": [
+    "Samples/ESSENCE MAIN LONG .flac"
+   ]
+  },
+  {
+   "id": "expressive-lead",
+   "name": "EXPRESSIVE - Lead",
+   "category": "Lead",
+   "dir": "expressive-lead",
+   "bytes": 1546496,
+   "files": [
+    "Samples/EXPRESS LEAD MAIN LONG.flac"
+   ]
+  },
+  {
+   "id": "fiddle",
+   "name": "Fiddle",
+   "category": "Strings",
+   "dir": "fiddle",
+   "bytes": 2307632,
+   "files": [
+    "Samples/FIDDLE MAIN LONG.flac"
+   ]
+  },
+  {
+   "id": "glitters",
+   "name": "Glitters",
+   "category": "Pad",
+   "dir": "glitters",
+   "bytes": 2810207,
+   "files": [
+    "Samples/Glitters Long .flac"
+   ]
+  },
+  {
+   "id": "manny-s-signature-ds-lead",
+   "name": "Manny's Signature DS Lead",
+   "category": "Lead",
+   "dir": "manny-s-signature-ds-lead",
+   "bytes": 804581,
+   "files": [
+    "Samples/Manny_s Signature DS Long Main.flac"
+   ]
+  },
+  {
+   "id": "orch-hit",
+   "name": "Orch Hit",
+   "category": "Strings",
+   "dir": "orch-hit",
+   "bytes": 397947,
+   "files": [
+    "Samples/Orch Hit Long.flac"
+   ]
+  },
+  {
+   "id": "sr-lead",
+   "name": "SR Lead",
+   "category": "Lead",
+   "dir": "sr-lead",
+   "bytes": 2075420,
+   "files": [
+    "Samples/Sine Resonant Lead Long.flac"
+   ]
+  },
+  {
+   "id": "scent-of-nature-bell",
+   "name": "Scent of Nature - Bell",
+   "category": "EP",
+   "dir": "scent-of-nature-bell",
+   "bytes": 1366046,
+   "files": [
+    "Samples/BELL MAIN LONG.flac"
+   ]
+  },
+  {
+   "id": "signature-flute",
+   "name": "Signature Flute",
+   "category": "",
+   "dir": "signature-flute",
+   "bytes": 6220008,
+   "files": [
+    "Samples/001_Flute Sweet!-102-127.ncw",
+    "Samples/001_Flute Sweet!-102-98.ncw",
+    "Samples/001_Flute Sweet!-48-127.ncw",
+    "Samples/001_Flute Sweet!-48-98.ncw",
+    "Samples/001_Flute Sweet!-54-127.ncw",
+    "Samples/001_Flute Sweet!-54-98.ncw",
+    "Samples/001_Flute Sweet!-60-127.ncw",
+    "Samples/001_Flute Sweet!-60-98.ncw",
+    "Samples/001_Flute Sweet!-66-127.ncw",
+    "Samples/001_Flute Sweet!-66-98.ncw",
+    "Samples/001_Flute Sweet!-72-127.ncw",
+    "Samples/001_Flute Sweet!-72-98.ncw",
+    "Samples/001_Flute Sweet!-78-127.ncw",
+    "Samples/001_Flute Sweet!-78-98.ncw",
+    "Samples/001_Flute Sweet!-84-127.ncw",
+    "Samples/001_Flute Sweet!-84-98.ncw",
+    "Samples/001_Flute Sweet!-90-127.ncw",
+    "Samples/001_Flute Sweet!-90-98.ncw",
+    "Samples/001_Flute Sweet!-96-127.ncw",
+    "Samples/001_Flute Sweet!-96-98.ncw"
+   ]
+  },
+  {
+   "id": "sine-poly",
+   "name": "Sine Poly",
+   "category": "Synth",
+   "dir": "sine-poly",
+   "bytes": 706509,
+   "files": [
+    "Samples/SINE POLY LONG .flac"
+   ]
+  },
+  {
+   "id": "ting",
+   "name": "TING!",
+   "category": "EP",
+   "dir": "ting",
+   "bytes": 1508026,
+   "files": [
+    "Samples/TING MAINLONG.flac",
+    "Samples/TING MAINLONG C4.flac"
+   ]
+  },
+  {
+   "id": "zenith-grand-piano",
+   "name": "Zenith Grand - Piano",
+   "category": "Piano",
+   "dir": "zenith-grand-piano",
+   "bytes": 6459598,
+   "files": [
+    "Samples/PRE 1 (A01) Full Concert Grand 021.flac",
+    "Samples/PRE 1 (A01) Full Concert Grand 023.flac",
+    "Samples/PRE 1 (A01) Full Concert Grand 026.flac",
+    "Samples/PRE 1 (A01) Full Concert Grand 029.flac",
+    "Samples/PRE 1 (A01) Full Concert Grand 032.flac",
+    "Samples/PRE 1 (A01) Full Concert Grand 035.flac",
+    "Samples/PRE 1 (A01) Full Concert Grand 038.flac",
+    "Samples/PRE 1 (A01) Full Concert Grand 041.flac",
+    "Samples/PRE 1 (A01) Full Concert Grand 044.flac",
+    "Samples/PRE 1 (A01) Full Concert Grand 047.flac",
+    "Samples/PRE 1 (A01) Full Concert Grand 050.flac",
+    "Samples/PRE 1 (A01) Full Concert Grand 053.flac",
+    "Samples/PRE 1 (A01) Full Concert Grand 055.flac",
+    "Samples/PRE 1 (A01) Full Concert Grand 058.flac",
+    "Samples/PRE 1 (A01) Full Concert Grand 060.flac",
+    "Samples/PRE 1 (A01) Full Concert Grand 062.flac",
+    "Samples/PRE 1 (A01) Full Concert Grand 065.flac",
+    "Samples/PRE 1 (A01) Full Concert Grand 068.flac",
+    "Samples/PRE 1 (A01) Full Concert Grand 070.flac",
+    "Samples/PRE 1 (A01) Full Concert Grand 072.flac",
+    "Samples/PRE 1 (A01) Full Concert Grand 074.flac",
+    "Samples/PRE 1 (A01) Full Concert Grand 078.flac",
+    "Samples/PRE 1 (A01) Full Concert Grand 080.flac",
+    "Samples/PRE 1 (A01) Full Concert Grand 083.flac",
+    "Samples/PRE 1 (A01) Full Concert Grand 084.flac",
+    "Samples/PRE 1 (A01) Full Concert Grand 086.flac",
+    "Samples/PRE 1 (A01) Full Concert Grand 087.flac",
+    "Samples/PRE 1 (A01) Full Concert Grand 089.flac",
+    "Samples/PRE 1 (A01) Full Concert Grand 092.flac",
+    "Samples/PRE 1 (A01) Full Concert Grand 095.flac",
+    "Samples/PRE 1 (A01) Full Concert Grand 098.flac",
+    "Samples/PRE 1 (A01) Full Concert Grand 101.flac",
+    "Samples/PRE 1 (A01) Full Concert Grand 104.flac",
+    "Samples/PRE 1 (A01) Full Concert Grand 107.flac"
+   ]
+  },
+  {
+   "id": "h-a-v-e-n",
+   "name": "h A v E n",
+   "category": "Pad",
+   "dir": "h-a-v-e-n",
+   "bytes": 2530736,
+   "files": [
+    "Samples/h A v E n Long.flac"
+   ]
+  }
+ ]
+}
